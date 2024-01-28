@@ -1,5 +1,5 @@
 # EBAC
-Este curso é destinado ao curso Engenharia Front-End da EBAC
+Este repositório é destinado ao curso Engenharia Front-End da EBAC
 
                         Sumário do Curso
 
