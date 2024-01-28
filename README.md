@@ -40,3 +40,18 @@ Parte 6 - Mais recursos do JavaScript
     * OO com JavaScript
     * Recursos do ES6+
     * Typescript
+
+Parte 7 - Frameworks Front-end
+    * VueJS
+    * ReacJS
+    * Styled Components
+    * Redux com ReactJS
+    * Projeto 5
+
+Parte 8 - Testing
+    * React Testing Library
+    * Testes E2E com Cypress
+
+Parte 9 - Interview, Career and Portfolio
+    * Dicas sobre entrevista e carreira
+    * Projeto Final
