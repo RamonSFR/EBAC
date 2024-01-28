@@ -29,3 +29,14 @@ Parte 4 - Pré-processadores e automação de tarefas
     * LESS
     * Grunt
     * Boas práticas para escrever CSS
+
+Parte 5 - Front-end aplicado ao marketing digital
+    * Construção de e-mail marketing
+    * Landing Page - Disney+ colne
+    * Landing Page - Página de evento
+
+Parte 6 - Mais recursos do JavaScript
+    * Ajax e Exceções
+    * OO com JavaScript
+    * Recursos do ES6+
+    * Typescript
