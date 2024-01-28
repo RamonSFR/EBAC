@@ -17,3 +17,15 @@ Parte 2 - Integrando HTML com JavaScript
     * Projeto 2
     * JQuery
     * Plugins com JQuery
+
+Parte 3 - CSS Responsivo e Bootstrap
+    * Rensponsividade
+    * Bootstrap
+    * Projeto 3
+
+Parte 4 - Pré-processadores e automação de tarefas
+    * SASS
+    * Gulp
+    * LESS
+    * Grunt
+    * Boas práticas para escrever CSS
