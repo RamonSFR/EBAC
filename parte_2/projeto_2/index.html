@@ -4,10 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Projeto 2 | EBAC</title>
+    <title>Calculadora de médias</title>
 </head>
 <body>
-    
+    <div class="container">
+        <header>
+            <img src="./images/logo.png" alt="capelo e diploma">
+            <h1>Calculadora de médias</h1>
+        </header>
+        <form>
+            <input type="text" required placeholder="Nome da atvidade">
+            <input type="number" required placeholder="Nota da atividade" min="0" max="10">
+            <button type="submit">Adicionar +</button>
+        </form>
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Nome da atividade</th>
+                    <th>Nota da atividade</th>
+                    <th>Aprovado?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Atividade 1</td>
+                    <td>7</td>
+                    <td><img src="./images/aprovado.png" alt="Emoji Festejando"></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Média final</td>
+                    <td>7</td>
+                    <td><span class="resultado aprovado">Aprovado</span></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
 </body>
 <script src="./script.js"></script>
 </html>
