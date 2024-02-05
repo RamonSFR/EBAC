@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    li {
+        list-style-type:none ;
+        max-width: 100%;
+    }
+    li img {
+        width: 100%;
+    }
+
+    @media screen and (min-width: 640px) {
+        li {
+            max-width: 33%;
+            float: left;
+        }
+    }
+
+    @media screen and (orientation: portrait) and (max-width: 640px) {
+        body {
+            background-color: red;
+        }
+    }
+
+    @media print {
+        h3 {
+            color: red;
+        }
+    }
+
+</style>
+<body>
+    <ul>
+        <li>
+            <img src="https://www.convexo.com.br/files/product_image/file/16782/all-star-seasonal-hi-verde-floresta-22-1.jpg">
+            <h3>Tênis Al star na cor verde</h3>
+        </li>
+        <li>
+            <img src="https://www.convexo.com.br/files/product_image/file/16782/all-star-seasonal-hi-verde-floresta-22-1.jpg">
+            <h3>Tênis Al star na cor verde</h3>
+        </li>
+        <li>
+            <img src="https://www.convexo.com.br/files/product_image/file/16782/all-star-seasonal-hi-verde-floresta-22-1.jpg">
+            <h3>Tênis Al star na cor verde</h3>
+        </li>
+    </ul>
+</body>
+</html>
