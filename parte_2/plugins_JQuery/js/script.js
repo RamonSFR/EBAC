@@ -23,6 +23,9 @@ $(document).ready(() => {
                 required: true,
                 email: true
             },
+            veiculoInteresse: {
+                required: false
+            },
             mensagem: {
                 required: true
             },
@@ -30,7 +33,7 @@ $(document).ready(() => {
                 nome: 'Por favor, insira seu nome'
             },
             submitHandler: function (form) {
-                console.log(form)
+                console.log(form);
             },
             invalidHandler: (evento, validador) => {
                 let camposIncorretos = validador.numberOfInvalids();
@@ -38,4 +41,14 @@ $(document).ready(() => {
             }
         }
     })
+
+    $('.lista-veiculos button').click(function () {
+        const destino = $('#contato');
+        const nomeVeiculo = $(this).siblings('h3').text();
+        $('#veiculoInteresse').val(nomeVeiculo);
+
+        $('html, body').animate({
+            scrollTop: destino.offset().top
+        }, 1000);
+    });
 });
