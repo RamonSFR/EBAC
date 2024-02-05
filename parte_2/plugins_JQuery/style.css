@@ -17,7 +17,7 @@ html {
     margin: 0 auto;
 }
 
-header {
+header , footer{
     background-color: #192a56;
     padding-top: 16px;
     color: #fff;
@@ -56,11 +56,19 @@ nav li a {
     margin-bottom: 4px;
 }
 
-header > .container {
+header > .container,
+footer > .container {
     padding-bottom: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .container-flex{
@@ -102,7 +110,7 @@ section h2 {
     margin: 0 5%;
 }
 
-.lista-veiculos li button {
+button {
     display: block;
     width: 100%;
     padding: 8px 0;
@@ -124,4 +132,38 @@ section h2 {
 .price del {
     color: #ccc;
     font-size: 14px;
+}
+
+.form-campo {
+    margin-bottom: 16px;
+}
+
+.form-campo label {
+    display: block;
+    font-weight: bold;
+}
+
+.form-campo input,
+.form-campo textarea {
+    width: 100%;
+    display: block;
+    padding: 8px;
+}
+
+.form-campo textarea {
+    resize: none;
+    height: 120px;
+}
+
+form button {
+    max-width: 120px;
+}
+
+footer li {
+    list-style: none;
+    margin-left: 16px ;
+}
+
+footer li img {
+    height: 32px;
 }
