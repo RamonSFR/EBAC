@@ -15,11 +15,15 @@ body {
 
 .nav .nav-link ,
 .navbar-brand,
-.navbar-brad:hover{
+.navbar-brand:hover{
     color: #fff;
 }
 
 .navbar-brand {
     font-size: 2rem;
     font-family: 'Pacifico', cursive;
+}
+
+.navbar-toggler {
+    background-color: #ffeae6;
 }
