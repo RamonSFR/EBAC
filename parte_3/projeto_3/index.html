@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./src/syles.css/style.css">
     <title>Projeto 3 - EBAC</title>
 </head>
 <body>
-    <header class="navbar navbar-expand-lg sticky-top p-4">
+    <header class="navbar navbar-expand-lg sticky-top p-4" id="cabecalho">
         <div class="container">
-            <h1 class="m-0 navbar-brand">Restaurante</h1>
+            <h1 class="m-0 navbar-brand section-title fs-1">Restaurante</h1>
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-navegacao">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <nav class="navbar-collapse collapse justify-content-end" id="menu-navegacao">
                 <ul class="nav nav-pills d-block d-md-flex">
                     <li class="nav-item fw-bold">
-                        <a href="#" class="nav-link active">
+                        <a href="#sobre-o-restaurante" class="nav-link">
                             <i class="bi bi-house-door me-1"></i>
                             Sobre o restaurante
                         </a>
@@ -45,6 +45,66 @@
             </nav>
         </div>
     </header>
+
+    <div data-bs-spy="scroll" data-bs-target="cabecalho">
+        <section id="sobre-o-restaurante">
+            <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="./src/images/slides/slide1.png" alt="foto espaço interno do restaurante">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="./src/images/slides/slide2.png" alt="Duas taças de vinho">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="./src/images/slides/slide3.png" alt="mesa com comida">
+                    </div>
+                </div>
+                <button type="button" class="carousel-control-prev" data-bs-target="#carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button type="button" class="carousel-control-next" data-bs-target="#carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+                </div>
+            </div>
+    
+            <div class="pt-5 pb-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src="./src/images/restaurante.jpg" class="d-block w-100 rounded" alt="imagem do restaurante">
+                        </div>
+                        <div class="col-md-7">
+                            <h2 class="section-title f-2">Sobre <span>o Restaurante</span></h2>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione magnam, 
+                                quibusdam officiis accusamus ipsam qui. Quam accusamus enim exercitationem 
+                                quos molestiae, laborum eaque deserunt repellendus. Fugit voluptas impedit 
+                                aliquam dolores!
+                            </p>
+                            <h3 class="section-title f-4">Sobre <span>o Espaço</span></h3>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione magnam, 
+                                quibusdam officiis accusamus ipsam qui. Quam accusamus enim exercitationem 
+                                quos molestiae, laborum eaque deserunt repellendus. Fugit voluptas impedit 
+                                aliquam dolores!
+                            </p>
+                            <ul>
+                                <li>Item 1</li>
+                                <li>Item 2</li>
+                                <li>Item 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>
