@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
+.navbar {
+    background-color: #e15f41;
+}
+
+.nav .nav-link.active{
+    background-color: #fff;
+    color: #e15f41;
+}
+
+.nav .nav-link ,
+.navbar-brand,
+.navbar-brad:hover{
+    color: #fff;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-family: 'Pacifico', cursive;
+}
