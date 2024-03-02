@@ -1,28 +1,7 @@
-$corPrincipal: #eee;
-$corSecundaria: #111;
+@use './config/reset.scss';
+@use 'config/cores.scss';
+@use './secoes/produtos.scss';
 
-body {
-    background-color: $corPrincipal;
-}
-
-header {
-    background-color: $corPrincipal;
-    h1 {
-        color: $corSecundaria;
-    }
-}
-
-button {
-    cursor: pointer;
-    padding: 16px;
-    background-color: $corSecundaria;
-    color: $corPrincipal;
-
-    &:hover {
-        background-color: yellow;
-    }
-
-    &.sucesso {
-        background-color: green;
-    }
+body  {
+    background-color: cores.$corDeFundo;
 }
