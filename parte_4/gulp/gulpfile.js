@@ -34,23 +34,8 @@ function funcaoPadrao(callback) {
         callback();
     }, 2000);
 }
-
-function dizOi(callback) {
-    console.log("Olá Gulp");
-    dizTchau();
-    callback();
+exports.default = function () {
+    gulp.watch('./src/styles/*.scss', { ignoreInitial: false }, gulp.series(compilaSass));
+    gulp.watch('./src/scripts/*.js', { ignoreInitial: false }, gulp.series(comprimeJavaScript));
+    gulp.watch('./src/images/**', { ignoreInitial: false }, gulp.series(comprimeImagens));
 }
-
-function dizTchau() {
-    console.log("Tchau Gulp");
-}
-
-// exports.default = gulp.series(funcaoPadrao, dizOi);
-exports.default = gulp.parallel(funcaoPadrao, dizOi);
-exports.dizOi = dizOi;
-exports.sass = compilaSass;
-exports.watch = function () {
-    gulp.watch('./src/styles/*.scss', {ignoreInitial: false} ,gulp.series(compilaSass))
-}
-exports.javascript = comprimeJavaScript;
-exports.images = comprimeImagens;
