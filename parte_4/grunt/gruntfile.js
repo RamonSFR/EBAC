@@ -26,6 +26,10 @@ module.exports = (grunt) => {
                     "main2.css": "main.scss"
                 }
             }
+        },
+
+        concurrent: {
+            target: ['olaGrunt', 'less', 'sass', 'tarefaDemorada']
         }
     })
 
@@ -37,11 +41,17 @@ module.exports = (grunt) => {
         }, 3000);
     })
 
+    grunt.registerTask('tarefaDemorada', function() {
+        const done = this.async();
+        setTimeout(() => {
+            console.log("Olá grunt");
+            done();
+        }, 3000);
+    })
+
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-concurrent');
 
-    grunt.registerTask('default', [
-        'less',
-        'sass'
-    ]);
+    grunt.registerTask('default', ['concurrent']);
 }
