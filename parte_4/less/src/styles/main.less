@@ -1,4 +1,5 @@
 @import "./variaveis.less";
+@import "./mapas.less";
 
 .marginBottom8 {
     margin-bottom: 8px;
@@ -10,9 +11,10 @@
     box-sizing: border-box;
     font-family: @fonte;
 }
+
 body {
-    background-color: @corDeFundo;
-    color: @corDosTextos;
+    background-color: #colors[backgroundColor];
+    color: #colors[textColor];
 }
 
 .container {
@@ -53,5 +55,24 @@ header {
 
     &-description {
         opacity: .7;
+    }
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-between;
+    max-width: 240px;
+    width: 100%;
+    margin: 0 auto;
+
+    li {
+        list-style: none;
+
+        img {
+            transition: all ease .3s;
+            &:hover {
+                transform: scale(1.3);
+            }
+        }
     }
 }
