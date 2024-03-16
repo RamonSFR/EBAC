@@ -24,6 +24,10 @@ module.exports = function (grunt) {
             html: {
                 files: ['./src/index.html'],
                 tasks: ['replace:dev']
+            },
+            js: {
+                files: ['./src/scripts/*.js'],
+                tasks: ['replace:dev']
             }
         },
         replace: {
@@ -33,6 +37,10 @@ module.exports = function (grunt) {
                         {
                             match: 'ENDERECO_DO_CSS',
                             replacement: './styles/main.css'
+                        },
+                        {
+                            match: 'ENDERECO_DO_JS',
+                            replacement: '../src/scripts/main.js'
                         }
                     ]
                 },
