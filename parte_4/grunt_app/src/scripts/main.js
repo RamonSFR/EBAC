@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
         let numeroAleatorio = Math.floor(((Math.random() * numeroMax) + 1));
 
         const textoResultado = `O número sorteado foi: <span id="valor_resultado">${numeroAleatorio}</span>`;
-        document.querySelector('.resultado').innerHTML = textoResultado;
+        const resultado = document.querySelector('.resultado');
+        
+        resultado.innerHTML = textoResultado;
+        resultado.style.display = 'block';
     })
 })
