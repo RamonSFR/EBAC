@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificidade</title>
+</head>
+<style>
+    /* 0 0 1 */
+    button {
+        background-color: blue;
+    }
+
+    /* 0 1 0 */
+    .btn-sucesso {
+        background-color: green;
+    }
+
+    /* 001 < 010 */
+
+    .btn-sucesso {
+        background-color: purple !important; 
+        /* !important sobrepõe as outras regras, porém é considerado má prática */
+    }
+</style>
+<body>
+    <button style="background-color: red;" class="btn-sucesso">Enviar mensagem</button>
+</body>
+<!-- Inline > Id/Classe > Tags -->
+</html>
