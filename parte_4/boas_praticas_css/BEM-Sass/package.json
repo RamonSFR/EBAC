@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass" : "sass",
+    "sass" : "sass ./BEM/main.scss ./BEM/main.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
