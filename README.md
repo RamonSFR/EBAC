@@ -32,6 +32,7 @@ Parte 4 - Pré-processadores e automação de tarefas
 
 Parte 5 - Front-end aplicado ao marketing digital
     * Construção de e-mail marketing
+    * Projeto 4
     * Landing Page - Disney+ colne
     * Landing Page - Página de evento
 
