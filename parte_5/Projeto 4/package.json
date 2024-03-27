@@ -1,8 +1,8 @@
 {
-  "name": "projeto-4_ebac",
+  "name": "projeto-4",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "build": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,8 +11,9 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.1.0",
-    "gulp-watcher": "^1.0.1",
+    "gulp-uglify": "^3.0.2",
     "sass": "^1.72.0"
   }
 }
