@@ -1,8 +1,25 @@
 @use 'variaveis.scss';
+@use 'mixins.scss';
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+}
+
+body {
+    background-color: variaveis.$corDeFundo;
+}
+
+.text--big {
+    @include text(18px);
+}
+
+.text {
+    @include text();
+}
+
+.text--small {
+    @include text(12px);
 }
