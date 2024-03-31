@@ -1,8 +1,14 @@
-@use 'variaveis.scss';
+@use 'variaveis';
+@use 'hero';
 
 @mixin text($fontSize: 16px) {
     font-size: $fontSize;
     line-height: $fontSize + 10px;
+}
+
+@mixin title($fontSize: 40px) {
+    @include text($fontSize);
+    color: variaveis.$corTextoSecundario;
 }
 
 * {
@@ -26,4 +32,22 @@ body {
 
 .text--small {
     @include text(12px);
+}
+
+.link-text {
+    @include text(18px);
+    color: variaveis.$corTextoSecundario;
+    text-decoration: underline;
+}
+
+.title--big {
+    @include title(44px);
+}
+
+.title {
+    @include title();
+}
+
+.title--small {
+    @include title(28px);
 }
