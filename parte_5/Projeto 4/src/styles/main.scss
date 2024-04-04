@@ -1,4 +1,5 @@
 @use 'variaveis';
+@use 'header';
 @use 'hero';
 @use 'shows';
 @use 'plans';
@@ -34,6 +35,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Avenir', sans-serif;
+    list-style: none;
 }
 
 body {
@@ -80,11 +82,34 @@ body {
     text-transform: uppercase;
     border: none;
     border-radius: 4px;
-    margin-top: 2vw;
-    margin-bottom: 8px;
+    text-decoration: none;
+    padding: 8px 14px;
     cursor: pointer;
+    letter-spacing: 1px;
+    border: 1px solid #6421ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
     &:hover {
-        background-color: darken(#6421ff, 2.5%);
+        background-color: lighten(#6421ff, 3%);
+    }
+
+    &--dark {
+        background-color: rgba(0,0,0,0.8);
+        border-color: variaveis.$corTextoSecundario;
+        &:hover {
+            background-color: #fff;
+            color: #000;
+        }
+    }
+
+    &--blue {
+        background-color: #0063e5;
+        border-color: #000;
+        &:hover {
+            background-color: lighten(#0063e5, 3%);
+        }
     }
 }
 
