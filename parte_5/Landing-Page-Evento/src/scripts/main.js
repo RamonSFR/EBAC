@@ -7,16 +7,21 @@ const contaAsHoras = setInterval(() => {
     const dataAtual = new Date();
     const timeStampAtual = dataAtual.getTime();
     const diferenca = timeStampDoEvento - timeStampAtual;
-
-    const diaEmMs = 1000 * 60 * 60 * 24;
-    const horaEmMs = 1000 * 60 * 60;
-    const minutoEmMs = 1000 * 60;
-
-    const diasAteOEvento = Math.floor(diferenca / diaEmMs);
-    const horasAteOEvento = Math.floor((diferenca % diaEmMs) / horaEmMs);
-    const minutosAteOEvento = Math.floor((diferenca % horaEmMs) / minutoEmMs);
-    const segundosAteOEvento = Math.floor((diferenca % minutoEmMs) / 1000);
-
-    const timerFinal = `${diasAteOEvento}d ${horasAteOEvento}h ${minutosAteOEvento}m ${segundosAteOEvento}s`;
-    document.getElementById("contador").innerHTML = timerFinal;
+    
+    if (diferenca < 0) {
+        clearInterval(contaAsHoras);
+        document.getElementById("contador").innerHTML = "Evento encerrado!";
+    } else {
+        const diaEmMs = 1000 * 60 * 60 * 24;
+        const horaEmMs = 1000 * 60 * 60;
+        const minutoEmMs = 1000 * 60;
+    
+        const diasAteOEvento = Math.floor(diferenca / diaEmMs);
+        const horasAteOEvento = Math.floor((diferenca % diaEmMs) / horaEmMs);
+        const minutosAteOEvento = Math.floor((diferenca % horaEmMs) / minutoEmMs);
+        const segundosAteOEvento = Math.floor((diferenca % minutoEmMs) / 1000);
+    
+        const timerFinal = `${diasAteOEvento}d ${horasAteOEvento}h ${minutosAteOEvento}m ${segundosAteOEvento}s`;
+        document.getElementById("contador").innerHTML = timerFinal;
+    }
 }, 1000)
