@@ -20,7 +20,7 @@ $(document).ready(() => {
 
     $('#btn-buscar-cep').click(() => {
         const cep = $('#cep').val();
-        const endpoint = `https://viacep.com.br/ws/${cep}/json/resultado`;
+        const endpoint = `https://viacep.com.br/ws/${cep}/json`;
         const botao = $('#btn-buscar-cep');
         
         $(botao).find('i').addClass('d-none');
@@ -52,11 +52,15 @@ $(document).ready(() => {
             const estado = json.uf;
             const endereco = `${logradouro} - ${bairro} - ${cidade} - ${estado}`;
             $('#endereco').val(endereco);
-
+        })
+        .catch(function(erro) {
+            alert("Ocorreu um erro ao buscar o endereço, tente novamente mais tarde");    
+        })
+        .finally(function () {
             setTimeout(() => {
                 $(botao).find('i').removeClass('d-none');
                 $(botao).find('span').addClass('d-none');
-            }, 2000);
+            }, 1000);
         })
     });
 })
