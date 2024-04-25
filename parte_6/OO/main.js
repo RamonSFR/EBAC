@@ -27,17 +27,31 @@ const ehMaiorDeIdade = true;
 const conhecimentos = ['HTML', "CSS", "JS"];
 
 const pessoa = {
-    const: nome,
+    nome: nome,
     idade: idade,
     ehMaiorDeIdade: ehMaiorDeIdade,
     conhecimentos: conhecimentos,
 }
 
-console.log(typeof nome);
-console.log(typeof idade);
-console.log(typeof ehMaiorDeIdade);
-console.log(typeof conhecimentos);
-console.log(typeof pessoa);
+function exibeAtributo(nomeAtributo) {
+    console.log(pessoa[nomeAtributo]);
+}
 
-console.log(carroDaMaria instanceof Carro);
-console.log(conhecimentos instanceof Array);
+Object.freeze(pessoa)
+
+pessoa['sobrenome'] = undefined;
+pessoa.nome = 'João';
+
+if (pessoa['sobrenome']) {
+    console.log('A pessoa tem um sobrenome');
+}
+
+if ('sobrenome' in pessoa) {
+    console.log('A pessoa tem um sobrenome');
+}
+
+exibeAtributo('nome');
+
+console.log(Object.keys(pessoa));
+console.log(Object.keys(pessoa).length);
+console.log(Object.values(pessoa));
