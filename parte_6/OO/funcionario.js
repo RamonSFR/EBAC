@@ -46,12 +46,25 @@ function Estagiario(nome) {
     }
 }
 
+function Gerente(nome) {
+    Funcionario.call(this, nome, 'Gerente', 10000);
+
+    this.aumento = (porcentagem = 15) => {
+        const novoSalario = this.getSalario() * (1 + (porcentagem / 100));
+        this.setSalario(novoSalario);
+    }
+}
+
 const Pessoa1 = new Pessoa("Maria");
 const Funcionario1 = new Funcionario("Maria", "Dev Front-end", 5000);
-const Funcionario2 = new Estagiario("Pedro", "Estagiario", 2000);
+const Funcionario2 = new Estagiario("Pedro");
+const Funcionario3 = new Gerente('Paula Tejano');
 
 Funcionario1.aumento();
 console.log(Funcionario1.getSalario());
 
 Funcionario2.aumento();
 console.log(Funcionario2.getSalario());
+
+Funcionario3.aumento();
+console.log(Funcionario3.getSalario());
