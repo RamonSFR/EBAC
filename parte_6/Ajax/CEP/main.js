@@ -43,7 +43,7 @@ $(document).ready(() => {
         // Fetch API
 
         fetch(endpoint).then((resposta) => {
-            return repoosta.json();
+            return resposta.json();
         })
         .then((json) => {
             const logradouro = json.logradouro;
@@ -63,4 +63,11 @@ $(document).ready(() => {
             }, 1000);
         })
     });
+
+    $('#formulario-pedido').submit((e) => {
+        e.preventDefault();
+        if ($('#nome').val().length == 0) { 
+            throw new Error('Digite o nome');
+        }
+    })
 })
