@@ -15,7 +15,7 @@ function Funcionario(nome, cargo, salario) {
 
     // Getters e Setters
     this.getSalario = () => {
-        return `O salário de ${this.nome} é de ${_salario}`;
+        return _salario;
     }
     this.setSalario = (valor) => {
         if (typeof valor === 'number') {
@@ -25,6 +25,11 @@ function Funcionario(nome, cargo, salario) {
         }
     }
 
+    this.aumento = (porcentagem = 10) => {
+        const novoSalario = _salario * (1 + (porcentagem / 100));
+         _salario = novoSalario;
+    }
+
     Pessoa.call(this, nome);
 
     this.dizCargo = () => {
@@ -32,12 +37,21 @@ function Funcionario(nome, cargo, salario) {
     }
 }
 
+function Estagiario(nome) {
+    Funcionario.call(this, nome, "Estagiario", 2000);
+
+    this.aumento = (porcentagem = 7) => {
+        const novoSalario = this.getSalario() * (1 + (porcentagem / 100));
+        this.setSalario(novoSalario);
+    }
+}
+
 const Pessoa1 = new Pessoa("Maria");
 const Funcionario1 = new Funcionario("Maria", "Dev Front-end", 5000);
+const Funcionario2 = new Estagiario("Pedro", "Estagiario", 2000);
 
-
-Funcionario1.dizOi();
-Funcionario1.dizCargo();
-
-Funcionario1.setSalario('mil');
+Funcionario1.aumento();
 console.log(Funcionario1.getSalario());
+
+Funcionario2.aumento();
+console.log(Funcionario2.getSalario());
