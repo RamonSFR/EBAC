@@ -95,3 +95,10 @@ const soma = nums.reduce((acumulador, itemAtual) => {
 }, 0);
 
 console.log(soma);
+
+
+const nomesDosAlunos = alunos2.reduce((acumulador, itemAtual) => {
+    return acumulador += `${itemAtual.nome} `;
+}, '');
+
+console.log(nomesDosAlunos);
