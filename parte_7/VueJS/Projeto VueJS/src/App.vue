@@ -25,6 +25,8 @@ const estaAutorizado = true;
 const estado = reactive({
   contador: 0,
   email: '',
+  saldo: 5000,
+  transferindo: 0,
 })
 
 function incrementarContador() {
@@ -39,6 +41,15 @@ function alteraEmail(evento) {
   estado.email = evento.target.value;
 }
 
+function mostraSaldoFuturo() {
+  const { saldo, transferindo } = estado;
+  return saldo - transferindo;
+}
+
+function validaValorTransferencia() {
+  const { saldo, transferindo } = estado;
+  return saldo >= transferindo;
+}
 </script>
 
 <template>
@@ -69,10 +80,29 @@ function alteraEmail(evento) {
   <br>
   <!-- <input placeholder="digite seu email" type="email" @keyup="evento => estado.email = evento.target.value"> -->
   <input placeholder="digite seu email" type="email" @keyup="alteraEmail">
+
+  <br>
+  <hr>
+  
+  Saldo: {{ estado.saldo }} <br>
+  Transferindo: {{ estado.transferindo }} <br>
+  Saldo depois da transferencia: {{ mostraSaldoFuturo() }} <br>
+  <input class="campo" :class="{ invalido:!validaValorTransferencia()}" @keyup="evento => estado.transferindo = evento.target.value" type="number" placeholder="Quantia para transferir">
+  <button v-if="validaValorTransferencia()">Transefir</button>
+  <span v-else>Valor maior do que o saldo!</span>
 </template>
 
 <style scoped>
   img {
     height: 200px;
+  }
+
+  .invalido {
+    outline-color: red;
+    border-color: red;
+  }
+
+  .campo {
+    border: 2px solid #000;
   }
 </style>
