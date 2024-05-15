@@ -1,14 +1,12 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import './perfil.css';
 
-const Perfil = () => {
-    const usuario = {
-        nome: 'Ramon Sávio',
-        avatar: 'https://github.com/RamonSFR.png'
-    }
+const Perfil = ({ endereco, nome }) => {
     return (
         <div>
-            <img className='perfil-avatar' src={usuario.avatar} alt="Avatar"/>
-            <h3 className='perfil-titulo'>{ usuario.nome }</h3>
+            <img className='perfil-avatar' src={endereco} alt="Avatar"/>
+            <h3 className='perfil-titulo'>{nome}</h3>
         </div>
     )
 }
