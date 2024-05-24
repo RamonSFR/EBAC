@@ -1,10 +1,23 @@
-import { useState } from "react";
+/* eslint-disable no-unused-vars */
+import { useState , useEffect} from "react";
 
 const Formulario = () => {
-    let [ materiaA, setMateriaA ] = useState(0);
-    let [ materiaB, setMateriaB ] = useState(0);
-    let [materiaC, setMateriaC] = useState(0);
-    let [nome, setNome] = useState(0);
+    const [ materiaA, setMateriaA ] = useState(0);
+    const [ materiaB, setMateriaB ] = useState(0);
+    const [materiaC, setMateriaC] = useState(0);
+    const [nome, setNome] = useState(0);
+
+    // mount
+    // update
+    // unmount
+
+    useEffect(() => {
+        console.log('O componente iniciou')
+
+        return () => {
+            console.log('O componente finalizou')
+        }
+    }, [])
 
     const alteraNome = (evento) => {
         setNome(estadoAnterior => {
