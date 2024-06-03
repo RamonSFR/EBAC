@@ -1,4 +1,5 @@
 import Perfil from './components/Perfil'
+import ReposList from './components/ReposList';
 import Formulario from './components/Formulario'
 import { useState } from 'react'
 
@@ -7,10 +8,12 @@ function App() {
   return (
     <>
       <Perfil nome="Ramon" endereco="https://github.com/RamonSFR.png" />
-      {formularioVisivel && (
+      <ReposList />
+      
+      {/* {formularioVisivel && (
         <Formulario/>
       )}
-      <button onClick={() => setFormularioVisivel(!formularioVisivel)} type="button">Toggle Form</button>
+      <button onClick={() => setFormularioVisivel(!formularioVisivel)} type="button">Toggle Form</button> */}
     </>
   )
 }

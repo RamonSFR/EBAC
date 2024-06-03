@@ -38,8 +38,12 @@ const Formulario = () => {
 
     return (
         <form>
+            <ul>
+                {[1, 2, 3, 4, 5].map(item => (
+                    <li key={item}>{item}</li>
+                ))}
+            </ul>
             <input type="text" placeholder="seu nome" onChange={alteraNome} /> <br />
-            
             <input onChange={evento => setMateriaA(parseInt(evento.target.value))} type="number" placeholder="Nota Matéria A"/>
             <input onChange={({target}) => setMateriaB(parseInt(target.value))} type="number" placeholder="Nota Matéria B"/>
             <input onChange={evento => setMateriaC(parseInt(evento.target.value))} type="number" placeholder="Nota Matéria C" />
