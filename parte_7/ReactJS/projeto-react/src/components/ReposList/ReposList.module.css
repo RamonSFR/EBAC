@@ -1,0 +1,29 @@
+.list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.listItem {
+    list-style: none;
+    padding: 16px;
+    border: 1px solid rgba(0,0,0,0.25);
+    border-radius: 6px;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.25);
+}
+
+.itemName , .itemLanguage{
+    margin-right: 8px;
+}
+
+.itemLink {
+    display: block;
+    background-color: var(--corSecundaria);
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 4px;
+    text-decoration: none;
+}
