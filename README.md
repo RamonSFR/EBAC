@@ -1,4 +1,4 @@
-# EBAC
+<center><img src="https://lms.ebaconline.com.br/_nuxt/img/ebac-logo.8292196.svg" width="320px"></center>
 
 ## Descrição
 Este repositório é destinado ao curso Engenharia Front-End da EBAC
