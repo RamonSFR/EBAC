@@ -1,7 +1,11 @@
+import Teste from './teste'
+import EstiloGlobal from './styles'
+
 function App() {
   return (
     <>
-      <h1>Hello World</h1>
+      <EstiloGlobal />
+      <Teste />
     </>
   )
 }
