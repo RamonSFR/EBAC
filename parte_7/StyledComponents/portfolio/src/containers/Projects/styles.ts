@@ -8,5 +8,7 @@ export const List = styled.ul`
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 16px';
   }
 `
