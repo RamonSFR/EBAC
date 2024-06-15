@@ -1,10 +1,10 @@
-import styled from 'styled-components'
 import Title from '../../components/Title'
+import { Avatar } from './styles'
 
 const Sidebar = () => {
   return (
     <aside className="sidebar">
-      <img src="https://github.com/RamonSFR.png" alt="Avatar" />
+      <Avatar src="https://github.com/RamonSFR.png" alt="Avatar" />
       <Title fontSize={20}>Ramon Sávio</Title>
     </aside>
   )

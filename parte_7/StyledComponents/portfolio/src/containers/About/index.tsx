@@ -1,5 +1,6 @@
 import Title from '../../components/Title'
 import Paragraph from '../../components/Paragraph'
+import { GithubSecao } from './styles'
 
 const About = () => {
   return (
@@ -11,6 +12,10 @@ const About = () => {
         praesentium rerum voluptate. Reprehenderit corporis distinctio provident
         dolorum voluptate nobis quo. Perferendis?
       </Paragraph>
+      <GithubSecao>
+        <img src="https://github-readme-stats.vercel.app/api?username=RamonSFR&show_icons=true&count_private=true&theme=dracula" />
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=RamonSFR&layout=compact&langs_count=7&theme=synthwave" />
+      </GithubSecao>
     </section>
   )
 }
