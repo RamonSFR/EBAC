@@ -5,4 +5,8 @@ export const List = styled.ul`
   grid-template-columns: 1fr 1fr;
   column-gap: 32px;
   row-gap: 40px;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `
