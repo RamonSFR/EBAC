@@ -9,11 +9,11 @@ export const Descricao = styled(P)`
 export const BotaoTema = styled.button`
   font-size: 10px;
   border-radius: 12px;
-  color: #eee;
+  color: ${(props) => props.theme.corDeFundo};
   padding: 8px;
   font-weight: bold;
   cursor: pointer;
-  background-color: #282a35;
+  background-color: ${(props) => props.theme.corPrincipal};
 `
 
 export const SidebarContainer = styled.div`
