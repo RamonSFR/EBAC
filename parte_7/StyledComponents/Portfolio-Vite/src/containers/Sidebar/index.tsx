@@ -1,4 +1,5 @@
 import Avatar from '../../components/Avatar'
+import Paragrafo from '../../components/Paragrafo'
 import Titulo from '../../components/Titulo'
 
 const Sidebar = () => {
@@ -6,6 +7,7 @@ const Sidebar = () => {
     <aside>
       <Avatar />
       <Titulo fontSize={20}>Ramon Sávio</Titulo>
+      <Paragrafo tipo="secundario" fontSize={16}>@RamonSFR</Paragrafo>
     </aside>
   )
 }
