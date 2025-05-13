@@ -33,13 +33,13 @@ const Produto = ({ game }: Props) => {
         {game.precoAntigo && <small>{paraReal(game.precoAntigo)}</small>}
         <strong>{paraReal(game.preco)}</strong>
       </S.Prices>
-      <S.BtnComprar
-        data-testid="btn-comprar"
+      <button
         onClick={() => dispatch(adicionar(game))}
+        data-testid="btn-comprar"
         type="button"
       >
         Adicionar ao carrinho
-      </S.BtnComprar>
+      </button>
     </S.Produto>
   )
 }
